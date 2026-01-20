@@ -22,18 +22,32 @@
     };
 
     macros {
-        qq: qq {
+        d1: d1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(D) &kp A &kp I &kp T &kp O &kp U &kp DOT &kp N6 &kp N1 &kp N0 &kp N2 &kp N9 &kp N3 &kp N6 &kp N6>;
-            label = "QQ";
+            bindings = <&kp LS(D) &kp A &kp I &kp T &kp O &kp U>;
+            label = "D1";
         };
 
-        q2: q2 {
+        d2: d2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(M) &kp A &kp G &kp I &kp C &kp DOT &kp N2 &kp N0 &kp N2 &kp N5>;
-            label = "Q2";
+            bindings = <&kp AT &kp N6 &kp N1 &kp N0 &kp N2 &kp N9 &kp N3 &kp N6 &kp N6>;
+            label = "D2";
+        };
+
+        d3: d3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(Q) &kp I &kp Y &kp A &kp O &kp AT_SIGN>;
+            label = "D3";
+        };
+
+        d4: d4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(M) &kp A &kp C &kp DOT &kp N2 &kp N0 &kp N2 &kp N5>;
+            label = "D4";
         };
     };
 
@@ -44,8 +58,8 @@
             display-name = "Base";
             bindings = <
 &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                          &mo 3      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &qq                                                             &none      &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &q2       &kp LEFT_COMMAND  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &d1                                                             &d3        &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &d2       &kp LEFT_COMMAND  &kp LALT      &kp LGUI   &kp RCTRL  &d4        &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp HOME      &kp PG_UP                        &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
 &mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL           &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
